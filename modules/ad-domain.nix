@@ -61,13 +61,7 @@ in
         extraConfig = ''
           realm = ${lib.toUpper cfg.longname}
           workgroup = ${lib.toUpper cfg.shortname}
-          idmap uid = 10000-20000
-          idmap gid = 10000-20000
-          template homedir = /home/%u.%d
-          template shell = /run/current-system/sw/bin/bash
           client use spnego = yes
-          client ntlmv2 auth = yes
-          encrypt passwords = yes
           restrict anonymous = 2
           server signing = mandatory
           client signing = mandatory
